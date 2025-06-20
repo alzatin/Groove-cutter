@@ -4,11 +4,228 @@
     "x": 0,
     "y": 0,
     "uniqueID": "13a46d93-9f73-411c-9c59-547516305687",
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "length",
+            "ioValue": 100
+        },
+        {
+            "name": "width",
+            "ioValue": 10
+        },
+        {
+            "name": "height",
+            "ioValue": 10
+        },
+        {
+            "name": "z",
+            "ioValue": 0
+        }
+    ],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": "4230ad85-a644-4118-99fb-f99cdb484f51",
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "c3064984-ccaa-4b7a-b85e-35b07e606d7a"
+                }
+            ],
+            "description": "Connect geometry here to make it available in the next level up. "
+        },
+        {
+            "atomType": "Input",
+            "name": "length",
+            "x": 0.0231,
+            "y": 0.3704819277108434,
+            "uniqueID": "1d3fad6b-131d-4970-9f1e-d77db339dd1d",
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
+        },
+        {
+            "atomType": "Input",
+            "name": "width",
+            "x": 0.0231,
+            "y": 0.6204819277108434,
+            "uniqueID": "59a88c49-1041-4a33-b765-578310ba9897",
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
+        },
+        {
+            "atomType": "Input",
+            "name": "height",
+            "x": 0.0231,
+            "y": 0.8463855421686747,
+            "uniqueID": "1b6b6b8b-1c2c-4552-9003-88175d81ab78",
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
+        },
+        {
+            "atomType": "Input",
+            "name": "z",
+            "x": 0.0231,
+            "y": 0.7409638554216867,
+            "uniqueID": "a5895225-3ee5-49c1-8c71-c0d7ceac6fb3",
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.23,
+            "y": 0.4939759036144578,
+            "uniqueID": "a7c42555-609e-473b-9ab4-e0ce65ebdc09",
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 10
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Creates a new rectangle."
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.354,
+            "y": 0.4367469879518072,
+            "uniqueID": "774511ca-276e-4451-986a-260dd23472ff",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "a7c42555-609e-473b-9ab4-e0ce65ebdc09"
+                },
+                {
+                    "name": "height",
+                    "ioValue": 100
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Rotate",
+            "name": "Rotate",
+            "x": 0.556,
+            "y": 0.4397590361445783,
+            "uniqueID": "fe7ac0a1-116a-4f34-b707-2b6c80e74fe6",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "774511ca-276e-4451-986a-260dd23472ff"
+                },
+                {
+                    "name": "x-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "y-axis degrees",
+                    "ioValue": 90
+                },
+                {
+                    "name": "z-axis degrees",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.753,
+            "y": 0.5240963855421688,
+            "uniqueID": "c3064984-ccaa-4b7a-b85e-35b07e606d7a",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "fe7ac0a1-116a-4f34-b707-2b6c80e74fe6"
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
+        }
+    ],
+    "allConnectors": [
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": "1d3fad6b-131d-4970-9f1e-d77db339dd1d",
+            "ap2ID": "774511ca-276e-4451-986a-260dd23472ff"
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "x length",
+            "ap2Primary": false,
+            "ap1ID": "59a88c49-1041-4a33-b765-578310ba9897",
+            "ap2ID": "a7c42555-609e-473b-9ab4-e0ce65ebdc09"
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "y length",
+            "ap2Primary": false,
+            "ap1ID": "1b6b6b8b-1c2c-4552-9003-88175d81ab78",
+            "ap2ID": "a7c42555-609e-473b-9ab4-e0ce65ebdc09"
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "zDist",
+            "ap2Primary": false,
+            "ap1ID": "a5895225-3ee5-49c1-8c71-c0d7ceac6fb3",
+            "ap2ID": "c3064984-ccaa-4b7a-b85e-35b07e606d7a"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "a7c42555-609e-473b-9ab4-e0ce65ebdc09",
+            "ap2ID": "774511ca-276e-4451-986a-260dd23472ff"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "774511ca-276e-4451-986a-260dd23472ff",
+            "ap2ID": "fe7ac0a1-116a-4f34-b707-2b6c80e74fe6"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "fe7ac0a1-116a-4f34-b707-2b6c80e74fe6",
+            "ap2ID": "c3064984-ccaa-4b7a-b85e-35b07e606d7a"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": "c3064984-ccaa-4b7a-b85e-35b07e606d7a",
+            "ap2ID": "4230ad85-a644-4118-99fb-f99cdb484f51"
+        }
+    ],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
     "compiledBom": {},
